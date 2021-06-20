@@ -12,11 +12,15 @@ struct Owl: ParsableCommand {
 	func run() throws {
 		guard
 			let encodedBuildDir = buildDir.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed),
-			let derivedDataUrl = URL(string: "file://" + encodedBuildDir)?
-				.deletingLastPathComponent()
-				.deletingLastPathComponent()
+			let buildDirUrl = URL(string: encodedBuildDir),
+			let buildIndex = buildDirUrl.pathComponents.firstIndex(of: "Build")
 		else {
 			return
+		}
+
+		var derivedDataUrl = URL(string: "file://")!
+		for component in buildDirUrl.pathComponents[..<buildIndex] {
+			derivedDataUrl.appendPathComponent(component)
 		}
 
 		let workspaceStateUrl = derivedDataUrl.appendingPathComponent("SourcePackages/workspace-state.json")
