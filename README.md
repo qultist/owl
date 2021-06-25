@@ -5,7 +5,15 @@ during the Xcode build process.
 
 ## Installation
 
-You can install `owl` from source.
+You can install `owl` either with [Homebrew](https://brew.sh) or from source.
+
+### Install with Homebrew
+
+```shell-script
+brew install qultist/formulae/owl
+```
+
+### Install from source
 
 ```shell-script
 rake install
