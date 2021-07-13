@@ -1,0 +1,489 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		415CAEBE269B544D008ED113 /* View+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415CAEBD269B544D008ED113 /* View+Navigation.swift */; };
+		415CAEC0269B54AF008ED113 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415CAEBF269B54AF008ED113 /* Coordinator.swift */; };
+		415CAEC2269B54E0008ED113 /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415CAEC1269B54E0008ED113 /* CoordinatorView.swift */; };
+		415CAEC7269B5624008ED113 /* PackageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415CAEC6269B5624008ED113 /* PackageListView.swift */; };
+		415CAECA269B564F008ED113 /* PackageListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415CAEC9269B564F008ED113 /* PackageListViewModel.swift */; };
+		415CAECC269B5A94008ED113 /* PackageResourceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415CAECB269B5A94008ED113 /* PackageResourceViewModel.swift */; };
+		41661ECF269A053500215D2D /* WindowsAzureMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 41661ECE269A053500215D2D /* WindowsAzureMessaging */; };
+		416D9D82269C5F0D00A68121 /* ScrollableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416D9D81269C5F0D00A68121 /* ScrollableText.swift */; };
+		416D9D85269C611400A68121 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 416D9D84269C611400A68121 /* SnapKit */; };
+		416D9D87269C648500A68121 /* PackageResourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416D9D86269C648500A68121 /* PackageResourceView.swift */; };
+		41C2F39F268650CA00CB092C /* LicenseViewerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C2F39E268650CA00CB092C /* LicenseViewerApp.swift */; };
+		41C2F3A3268650CB00CB092C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41C2F3A2268650CB00CB092C /* Assets.xcassets */; };
+		41C2F3A6268650CB00CB092C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41C2F3A5268650CB00CB092C /* Preview Assets.xcassets */; };
+		41C2F3B02686533600CB092C /* Licenses in Resources */ = {isa = PBXBuildFile; fileRef = 41C2F3AF2686533600CB092C /* Licenses */; };
+		41C2F3B62686553300CB092C /* SwiftPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C2F3B52686553300CB092C /* SwiftPackage.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		415CAEBD269B544D008ED113 /* View+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Navigation.swift"; sourceTree = "<group>"; };
+		415CAEBF269B54AF008ED113 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		415CAEC1269B54E0008ED113 /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
+		415CAEC6269B5624008ED113 /* PackageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageListView.swift; sourceTree = "<group>"; };
+		415CAEC9269B564F008ED113 /* PackageListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageListViewModel.swift; sourceTree = "<group>"; };
+		415CAECB269B5A94008ED113 /* PackageResourceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageResourceViewModel.swift; sourceTree = "<group>"; };
+		416D9D81269C5F0D00A68121 /* ScrollableText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableText.swift; sourceTree = "<group>"; };
+		416D9D86269C648500A68121 /* PackageResourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageResourceView.swift; sourceTree = "<group>"; };
+		41C2F39B268650CA00CB092C /* LicenseViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LicenseViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		41C2F39E268650CA00CB092C /* LicenseViewerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseViewerApp.swift; sourceTree = "<group>"; };
+		41C2F3A2268650CB00CB092C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		41C2F3A5268650CB00CB092C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		41C2F3A7268650CB00CB092C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41C2F3AF2686533600CB092C /* Licenses */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Licenses; sourceTree = "<group>"; };
+		41C2F3B52686553300CB092C /* SwiftPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPackage.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		41C2F398268650CA00CB092C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				416D9D85269C611400A68121 /* SnapKit in Frameworks */,
+				41661ECF269A053500215D2D /* WindowsAzureMessaging in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		415CAEBC269B5437008ED113 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				415CAEBD269B544D008ED113 /* View+Navigation.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		415CAEC3269B5589008ED113 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				415CAEC4269B559E008ED113 /* Navigation */,
+				415CAEC5269B55E0008ED113 /* Packages */,
+				416D9D88269C655600A68121 /* Widgets */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		415CAEC4269B559E008ED113 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				415CAEBC269B5437008ED113 /* Extensions */,
+				415CAEBF269B54AF008ED113 /* Coordinator.swift */,
+				415CAEC1269B54E0008ED113 /* CoordinatorView.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		415CAEC5269B55E0008ED113 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				415CAEC8269B562E008ED113 /* Model */,
+				415CAEC6269B5624008ED113 /* PackageListView.swift */,
+				415CAEC9269B564F008ED113 /* PackageListViewModel.swift */,
+				416D9D86269C648500A68121 /* PackageResourceView.swift */,
+				415CAECB269B5A94008ED113 /* PackageResourceViewModel.swift */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		415CAEC8269B562E008ED113 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				41C2F3B52686553300CB092C /* SwiftPackage.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		416D9D88269C655600A68121 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				416D9D81269C5F0D00A68121 /* ScrollableText.swift */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		41C2F392268650CA00CB092C = {
+			isa = PBXGroup;
+			children = (
+				41C2F39D268650CA00CB092C /* LicenseViewer */,
+				41C2F39C268650CA00CB092C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		41C2F39C268650CA00CB092C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				41C2F39B268650CA00CB092C /* LicenseViewer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		41C2F39D268650CA00CB092C /* LicenseViewer */ = {
+			isa = PBXGroup;
+			children = (
+				415CAEC3269B5589008ED113 /* Features */,
+				41C2F39E268650CA00CB092C /* LicenseViewerApp.swift */,
+				41C2F3AE268651B000CB092C /* Resources */,
+				41C2F3A4268650CB00CB092C /* Preview Content */,
+			);
+			path = LicenseViewer;
+			sourceTree = "<group>";
+		};
+		41C2F3A4268650CB00CB092C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				41C2F3A5268650CB00CB092C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		41C2F3AE268651B000CB092C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				41C2F3A2268650CB00CB092C /* Assets.xcassets */,
+				41C2F3AF2686533600CB092C /* Licenses */,
+				41C2F3A7268650CB00CB092C /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		41C2F39A268650CA00CB092C /* LicenseViewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41C2F3AA268650CB00CB092C /* Build configuration list for PBXNativeTarget "LicenseViewer" */;
+			buildPhases = (
+				41C2F3B12686534500CB092C /* Owl */,
+				41C2F397268650CA00CB092C /* Sources */,
+				41C2F398268650CA00CB092C /* Frameworks */,
+				41C2F399268650CA00CB092C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LicenseViewer;
+			packageProductDependencies = (
+				41661ECE269A053500215D2D /* WindowsAzureMessaging */,
+				416D9D84269C611400A68121 /* SnapKit */,
+			);
+			productName = LicenseViewer;
+			productReference = 41C2F39B268650CA00CB092C /* LicenseViewer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		41C2F393268650CA00CB092C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					41C2F39A268650CA00CB092C = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = 41C2F396268650CA00CB092C /* Build configuration list for PBXProject "LicenseViewer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 41C2F392268650CA00CB092C;
+			packageReferences = (
+				41661ECD269A053500215D2D /* XCRemoteSwiftPackageReference "azure-notificationhubs-ios" */,
+				416D9D83269C611400A68121 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
+			productRefGroup = 41C2F39C268650CA00CB092C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				41C2F39A268650CA00CB092C /* LicenseViewer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		41C2F399268650CA00CB092C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41C2F3A6268650CB00CB092C /* Preview Assets.xcassets in Resources */,
+				41C2F3B02686533600CB092C /* Licenses in Resources */,
+				41C2F3A3268650CB00CB092C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		41C2F3B12686534500CB092C /* Owl */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Owl;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which owl >/dev/null; then\n  owl -b \"$BUILD_DIR\" -o \"$SOURCE_ROOT/LicenseViewer/Resources/Licenses\"\nelse\n  echo \"warning: Owl is not installed, you can download it from https://github.com/qultist/owl\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		41C2F397268650CA00CB092C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				415CAECC269B5A94008ED113 /* PackageResourceViewModel.swift in Sources */,
+				415CAEC2269B54E0008ED113 /* CoordinatorView.swift in Sources */,
+				415CAECA269B564F008ED113 /* PackageListViewModel.swift in Sources */,
+				416D9D87269C648500A68121 /* PackageResourceView.swift in Sources */,
+				415CAEBE269B544D008ED113 /* View+Navigation.swift in Sources */,
+				415CAEC7269B5624008ED113 /* PackageListView.swift in Sources */,
+				415CAEC0269B54AF008ED113 /* Coordinator.swift in Sources */,
+				41C2F39F268650CA00CB092C /* LicenseViewerApp.swift in Sources */,
+				41C2F3B62686553300CB092C /* SwiftPackage.swift in Sources */,
+				416D9D82269C5F0D00A68121 /* ScrollableText.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		41C2F3A8268650CB00CB092C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		41C2F3A9268650CB00CB092C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		41C2F3AB268650CB00CB092C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"LicenseViewer/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/LicenseViewer/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "de.abstraqt.license-viewer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		41C2F3AC268650CB00CB092C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"LicenseViewer/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/LicenseViewer/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "de.abstraqt.license-viewer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		41C2F396268650CA00CB092C /* Build configuration list for PBXProject "LicenseViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41C2F3A8268650CB00CB092C /* Debug */,
+				41C2F3A9268650CB00CB092C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		41C2F3AA268650CB00CB092C /* Build configuration list for PBXNativeTarget "LicenseViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41C2F3AB268650CB00CB092C /* Debug */,
+				41C2F3AC268650CB00CB092C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		41661ECD269A053500215D2D /* XCRemoteSwiftPackageReference "azure-notificationhubs-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Azure/azure-notificationhubs-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.3;
+			};
+		};
+		416D9D83269C611400A68121 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		41661ECE269A053500215D2D /* WindowsAzureMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41661ECD269A053500215D2D /* XCRemoteSwiftPackageReference "azure-notificationhubs-ios" */;
+			productName = WindowsAzureMessaging;
+		};
+		416D9D84269C611400A68121 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 416D9D83269C611400A68121 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 41C2F393268650CA00CB092C /* Project object */;
+}
