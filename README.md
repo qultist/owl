@@ -31,8 +31,11 @@ else
 fi
 ```
 
+> The `BUILD_DIR` and `SOURCE_ROOT` environment variables are provided by Xcode during build.
+
 Owl will then create a `packages.json` file containing some information about the Swift packages and copy their license
-and notice files. Then it is up to you what you do with these files. :wink:
+and notice files. Then it is up to you what you do with these files. :wink: You can have a look at the
+[example](Example) to see how I integrate Owl and use the files.
 
 ## License
 
