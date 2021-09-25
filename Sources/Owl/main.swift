@@ -26,10 +26,18 @@ struct Owl: ParsableCommand {
 		let workspaceStateUrl = derivedDataUrl.appendingPathComponent("SourcePackages/workspace-state.json")
 
 		guard
-			let workspaceStateData = try? Data(contentsOf: workspaceStateUrl),
-			let workspaceState = try? JSONDecoder().decode(WorkspaceState.self, from: workspaceStateData)
+			let workspaceStateData = try? Data(contentsOf: workspaceStateUrl)
 		else {
 			print("Could not find workspace-state.json")
+			return
+		}
+
+		var workspaceState: WorkspaceState!
+
+		do {
+			workspaceState = try JSONDecoder().decode(WorkspaceState.self, from: workspaceStateData)
+		} catch (let error) {
+			print("Could not decode workspace state. Error: \(error)")
 			return
 		}
 

@@ -21,7 +21,12 @@ struct PackageRef: Codable {
 
 	let identity: String
 	let name: String
-	let path: String
+
+	/// Path of the package. Available up to and including Xcode 12.5.1 and is replaced by ``location``.
+	let path: String?
+
+	/// Location of the package. Available since Xcode 13 and replaces ``path``.
+	let location: String?
 }
 
 struct State: Codable {
@@ -31,5 +36,7 @@ struct State: Codable {
 
 struct CheckoutState: Codable {
 
-	let version: String
+	let branch: String?
+	let version: String?
+	let revision: String
 }

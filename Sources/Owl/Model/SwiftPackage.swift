@@ -9,7 +9,9 @@ final class SwiftPackage: Codable {
 
 	init(from dependency: Dependency) {
 		name = dependency.packageRef.name
-		version = dependency.state.checkoutState.version
+
+		let checkoutState = dependency.state.checkoutState
+		version = checkoutState.version ?? checkoutState.branch ?? String(checkoutState.revision.prefix(7))
 	}
 
 	func encode(to encoder: Encoder) throws {
