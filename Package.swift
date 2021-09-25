@@ -9,7 +9,7 @@ let package = Package(
 		.executable(name: "owl", targets: ["Owl"])
 	],
     dependencies: [
-		.package(url: "https://github.com/apple/swift-argument-parser", from: "0.4.0"),
+		.package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.1"),
     ],
     targets: [
         .target(
