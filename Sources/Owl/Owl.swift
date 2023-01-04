@@ -10,6 +10,9 @@ struct Owl: ParsableCommand {
 	@Option(name: .shortAndLong, help: "The output directory where the found licenses etc. are copied to.")
 	var outputDir: String
 
+	@Flag(help: "Clean output directory. This will delete all files in the given directory!")
+	var cleanOutputDir = false
+
 	func run() throws {
 		guard
 			let encodedBuildDir = buildDir.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed),
@@ -45,6 +48,10 @@ struct Owl: ParsableCommand {
 		let checkoutsUrl = derivedDataUrl.appendingPathComponent("SourcePackages/checkouts")
 		let outputUrl = URL(string: "file://" +  outputDir)!
 		let fm = FileManager.default
+
+		if cleanOutputDir {
+			try cleanOutputDir(outputUrl)
+		}
 
 		var packages = [SwiftPackage]()
 
@@ -93,5 +100,18 @@ struct Owl: ParsableCommand {
 	private func copyFile(at srcUrl: URL, to destUrl: URL) throws {
 		try? FileManager.default.removeItem(at: destUrl)
 		try FileManager.default.copyItem(at: srcUrl, to: destUrl)
+	}
+
+	private func cleanOutputDir(_ outputUrl: URL) throws {
+		let fm = FileManager.default
+		let contents = try fm.contentsOfDirectory(
+			at: outputUrl,
+			includingPropertiesForKeys: nil,
+			options: .skipsHiddenFiles
+		)
+
+		for url in contents {
+			try fm.removeItem(at: url)
+		}
 	}
 }
