@@ -1,6 +1,7 @@
 import ArgumentParser
 import Foundation
 
+@main
 struct Owl: ParsableCommand {
 
 	@Option(name: .shortAndLong, help: "The Xcode build directory.")
@@ -94,5 +95,3 @@ struct Owl: ParsableCommand {
 		try FileManager.default.copyItem(at: srcUrl, to: destUrl)
 	}
 }
-
-Owl.main()
