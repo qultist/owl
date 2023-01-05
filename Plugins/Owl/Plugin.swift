@@ -30,9 +30,15 @@ extension OwlPlugin: XcodeBuildToolPlugin {
 		context: XcodeProjectPlugin.XcodePluginContext,
 		target: XcodeProjectPlugin.XcodeTarget
 	) throws -> [PackagePlugin.Command] {
-		print(target.displayName)
+		print("Owl plugin: \(target.displayName)")
 
-		return []
+		return [
+			.buildCommand(
+				displayName: "Collecting package information",
+				executable: try context.tool(named: "OwlExec").path,
+				arguments: []
+			)
+		]
 	}
 }
 #endif
