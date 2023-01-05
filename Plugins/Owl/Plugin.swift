@@ -20,3 +20,19 @@ struct OwlPlugin: BuildToolPlugin {
 
 
 }
+
+#if canImport(XcodeProjectPlugin)
+import XcodeProjectPlugin
+
+extension OwlPlugin: XcodeBuildToolPlugin {
+
+	func createBuildCommands(
+		context: XcodeProjectPlugin.XcodePluginContext,
+		target: XcodeProjectPlugin.XcodeTarget
+	) throws -> [PackagePlugin.Command] {
+		print(target.displayName)
+
+		return []
+	}
+}
+#endif
