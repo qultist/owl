@@ -6,18 +6,18 @@ import PackageDescription
 let package = Package(
 	name: "Owl",
 	products: [
-		.plugin(name: "OwlPlugin", targets: ["OwlPlugin"])
+		.plugin(name: "Owl", targets: ["Owl"])
 	],
 	dependencies: [
 		.package(url: "https://github.com/apple/swift-argument-parser", from: "1.2.0"),
 	],
 	targets: [
 		.executableTarget(
-			name: "Owl",
+			name: "OwlExec",
 			dependencies: [
 				.product(name: "ArgumentParser", package: "swift-argument-parser")
 			]
 		),
-		.plugin(name: "OwlPlugin", capability: .buildTool(), dependencies: ["Owl"])
+		.plugin(name: "Owl", capability: .buildTool(), dependencies: ["OwlExec"])
 	]
 )

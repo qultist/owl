@@ -1,5 +1,6 @@
 import PackagePlugin
 
+@main
 struct OwlPlugin: BuildToolPlugin {
 
 	func createBuildCommands(
@@ -10,8 +11,8 @@ struct OwlPlugin: BuildToolPlugin {
 
 		return [
 			.buildCommand(
-				displayName: "Collecting…",
-				executable: try context.tool(named: "Owl").path,
+				displayName: "Collecting package information",
+				executable: try context.tool(named: "OwlExec").path,
 				arguments: []
 			)
 		]
