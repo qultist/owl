@@ -7,21 +7,14 @@ struct OwlPlugin: BuildToolPlugin {
 		context: PackagePlugin.PluginContext,
 		target: PackagePlugin.Target
 	) async throws -> [PackagePlugin.Command] {
-		print(target.name)
-
-		return [
-			.buildCommand(
-				displayName: "Collecting package information",
-				executable: try context.tool(named: "OwlExec").path,
-				arguments: []
-			)
-		]
+		fatalError("For now this plugin is meant to be used as Xcode build plugin.")
 	}
 
 
 }
 
 #if canImport(XcodeProjectPlugin)
+import Foundation
 import XcodeProjectPlugin
 
 extension OwlPlugin: XcodeBuildToolPlugin {
@@ -30,13 +23,22 @@ extension OwlPlugin: XcodeBuildToolPlugin {
 		context: XcodeProjectPlugin.XcodePluginContext,
 		target: XcodeProjectPlugin.XcodeTarget
 	) throws -> [PackagePlugin.Command] {
-		print("Owl plugin: \(target.displayName)")
+		let licensesDirectoryPath = context.pluginWorkDirectory
+			.appending(subpath: "Licenses")
+
+		try? FileManager.default.removeItem(atPath: licensesDirectoryPath.string)
+
+		try FileManager.default.createDirectory(
+			atPath: licensesDirectoryPath.string,
+			withIntermediateDirectories: false
+		)
 
 		return [
 			.buildCommand(
 				displayName: "Collecting package information",
 				executable: try context.tool(named: "OwlExec").path,
-				arguments: []
+				arguments: ["-o", licensesDirectoryPath],
+				outputFiles: [licensesDirectoryPath]
 			)
 		]
 	}

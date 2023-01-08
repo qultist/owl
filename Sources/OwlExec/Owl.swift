@@ -5,7 +5,7 @@ import Foundation
 struct Owl: ParsableCommand {
 
 	@Option(name: .shortAndLong, help: "The Xcode build directory.")
-	var buildDir: String
+	var buildDir: String?
 
 	@Option(name: .shortAndLong, help: "The output directory where the found licenses etc. are copied to.")
 	var outputDir: String
@@ -14,6 +14,10 @@ struct Owl: ParsableCommand {
 	var cleanOutputDir = false
 
 	func run() throws {
+		guard let buildDir = buildDir ?? ProcessInfo.processInfo.environment["BUILD_DIR"] else {
+			throw OwlError.buildDirNotSpecified
+		}
+		
 		guard
 			let encodedBuildDir = buildDir.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed),
 			let buildDirUrl = URL(string: encodedBuildDir),
@@ -94,7 +98,6 @@ struct Owl: ParsableCommand {
 
 		try String(data: packagesJsonData, encoding: .utf8)?
 			.write(to: outputUrl.appendingPathComponent("packages.json"), atomically: true, encoding: .utf8)
-
 	}
 
 	private func copyFile(at srcUrl: URL, to destUrl: URL) throws {
@@ -112,6 +115,22 @@ struct Owl: ParsableCommand {
 
 		for url in contents {
 			try fm.removeItem(at: url)
+		}
+	}
+}
+
+enum OwlError: LocalizedError {
+
+	case buildDirNotSpecified
+
+	var errorDescription: String? {
+		switch self {
+		case .buildDirNotSpecified:
+			return """
+				No Xcode build directory specified. \
+				Either pass it with the `-b <build-dir>` option or set the BUILD_DIR environment variable. \
+				The BUILD_DIR environment variable is provided by Xcode during build.
+				"""
 		}
 	}
 }
