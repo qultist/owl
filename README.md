@@ -5,7 +5,18 @@ during the Xcode build process.
 
 ## Installation
 
-You can install `owl` either with [Homebrew](https://brew.sh) or from source.
+You can install `owl` either with Swift Package Manger[^1], [Homebrew](https://brew.sh) or
+from source.
+
+[^1]: Xcode 14 or newer
+
+### Install with Swift Package Manager
+
+Just add the package to your project.
+
+```
+https://github.com/qultist/owl
+```
 
 ### Install with Homebrew
 
@@ -21,6 +32,24 @@ rake install
 
 ## Usage
 
+Based on the installation method the usage differs. You can have a look at the [examples](Examples) to see how I'm using
+the output of Owl.
+
+### Swift Package Manager resp. Xcode Build Tool Plug-in
+
+Starting from Xcode 14 you can add so called Build Tool Plug-ins to targets.
+
+![Xcode Build Tool Plug-ins Screenshot](xcode-build-tool-plugin.png)
+
+Owl will then create a `packages.json` file containing some information about the Swift packages and copy their license
+and notice files to the bundle.
+
+```swift
+let packagesJsonUrl = Bundle.main.url(forResource: "packages", withExtension: "json", subdirectory: "Licences")!
+```
+
+### Executable
+
 Add the following Run Script Phase to your Xcode project. Make sure that the output directory exists!
 
 ```shell-script
@@ -33,9 +62,7 @@ fi
 
 > The `BUILD_DIR` and `SOURCE_ROOT` environment variables are provided by Xcode during build.
 
-Owl will then create a `packages.json` file containing some information about the Swift packages and copy their license
-and notice files. Then it is up to you what you do with these files. :wink: You can have a look at the
-[example](Example) to see how I integrate Owl and use the files.
+The output is not copied directly to the bundle, but to the specified output directory.
 
 ## License
 
